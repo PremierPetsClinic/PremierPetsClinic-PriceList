@@ -20,262 +20,288 @@
     --gold-deep:#8f6a28;
     --line:#e6e0cd;
   }
-
   *{box-sizing:border-box;}
   html{-webkit-text-size-adjust:100%;}
-  body{
-    margin:0;
-    background:var(--cream);
-    color:var(--ink);
-    font-family:'Inter',sans-serif;
-    -webkit-font-smoothing:antialiased;
-  }
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
   svg.sprite{position:absolute;width:0;height:0;overflow:hidden;}
-
   .wrap{max-width:720px;margin:0 auto;padding:0 20px 70px;}
-
-  /* ---------- Hero ---------- */
-  header{
-    background:var(--sage-deep);
-    color:#f4f2e6;
-    padding:56px 20px 110px;
-    position:relative;
-    overflow:hidden;
-    text-align:center;
-  }
-  .paw-deco{
-    position:absolute;
-    color:rgba(244,242,230,.09);
-    pointer-events:none;
-    z-index:1;
-  }
+  header{background:var(--sage-deep);color:#f4f2e6;padding:56px 20px 110px;position:relative;overflow:hidden;text-align:center;}
   header .wrap{position:relative;z-index:2;padding:0;}
-  .hero-ring{
-    width:220px;height:220px;
-    border:1px solid rgba(244,242,230,.16);
-    border-radius:50%;
-    position:absolute;
-    left:50%;top:-70px;
-    transform:translateX(-50%);
-    z-index:1;
-  }
-  .hero-ring.r2{width:340px;height:340px;top:-130px;border-color:rgba(244,242,230,.08);}
-  .logo-medal{
-    width:150px;height:150px;
-    border-radius:50%;
-    background:#f4f2e6;
-    margin:0 auto 22px;
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 0 0 1px rgba(244,242,230,.3), 0 0 0 9px rgba(199,154,75,.14), 0 16px 40px rgba(0,0,0,.3);
-  }
-  .logo-medal img{width:118px;height:118px;object-fit:contain;display:block;}
-  .eyebrow{
-    text-transform:uppercase;letter-spacing:.18em;font-size:11px;
-    color:var(--gold);font-weight:600;margin-bottom:10px;
-  }
-  h1{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:clamp(30px,8vw,42px);
-    line-height:1.08;
-    margin:0 0 6px;
-  }
-  .ar-name{
-    font-size:14px;
-    color:#c7c9b4;
-    direction:rtl;
-    margin:0 0 18px;
-  }
-  .rule{
-    width:46px;height:2px;background:var(--gold);
-    margin:0 auto 18px;
-    border-radius:2px;
-  }
-  header p.tag{
-    color:#d3d4c2;
-    font-size:15px;
-    max-width:40ch;
-    margin:0 auto;
-    line-height:1.6;
-  }
-
-  /* ---------- Sticky category nav ---------- */
-  nav.cats{
-    position:sticky;top:0;z-index:10;
-    background:rgba(250,247,238,.94);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-    margin-top:-54px;
-  }
-  nav.cats .inner{
-    max-width:720px;margin:0 auto;
-    display:flex;gap:8px;overflow-x:auto;
-    padding:14px 20px;
-    scrollbar-width:none;
-  }
+  .hero-ring{width:220px;height:220px;border:1px solid rgba(244,242,230,.16);border-radius:50%;position:absolute;left:50%;top:-70px;transform:translateX(-50%);z-index:1;}
+  .hero-ring.r2{width:320px;height:320px;top:-120px;border-color:rgba(244,242,230,.08);}
+  .logo-medal{width:84px;height:84px;border-radius:50%;background:#f4f2e6;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 1px rgba(244,242,230,.25), 0 10px 30px rgba(0,0,0,.25);}
+  .logo-medal img{width:64px;height:64px;object-fit:contain;display:block;}
+  .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--gold);font-weight:600;margin-bottom:10px;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,8vw,42px);line-height:1.08;margin:0 0 6px;}
+  .ar-name{font-size:14px;color:#c7c9b4;direction:rtl;margin:0 0 18px;}
+  .rule{width:46px;height:2px;background:var(--gold);margin:0 auto 18px;border-radius:2px;}
+  header p.tag{color:#d3d4c2;font-size:15px;max-width:40ch;margin:0 auto;line-height:1.6;}
+  nav.cats{position:sticky;top:0;z-index:10;background:rgba(250,247,238,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin-top:-54px;}
+  nav.cats .inner{max-width:720px;margin:0 auto;display:flex;gap:8px;overflow-x:auto;padding:14px 20px;scrollbar-width:none;}
   nav.cats .inner::-webkit-scrollbar{display:none;}
-  nav.cats a{
-    flex:0 0 auto;
-    font-size:12.5px;font-weight:600;
-    color:var(--ink-soft);
-    background:var(--paper);
-    border:1px solid var(--line);
-    padding:8px 15px;
-    border-radius:100px;
-    text-decoration:none;
-    white-space:nowrap;
-    transition:border-color .15s, color .15s;
-  }
+  nav.cats a{flex:0 0 auto;font-size:12.5px;font-weight:600;color:var(--ink-soft);background:var(--paper);border:1px solid var(--line);padding:8px 15px;border-radius:100px;text-decoration:none;white-space:nowrap;transition:border-color .15s, color .15s;}
   nav.cats a:hover{border-color:var(--gold-deep);color:var(--gold-deep);}
-
-  /* ---------- Doctor card ---------- */
-  .doctor{
-    margin-top:28px;
-    display:flex;
-    align-items:center;
-    gap:18px;
-    background:var(--sage-pale);
-    border:1px solid var(--line);
-    border-radius:16px;
-    padding:20px;
-  }
-  .doctor .avatar{
-    width:76px;height:76px;
-    border-radius:50%;
-    flex-shrink:0;
-    background:var(--paper);
-    border:2px solid var(--gold);
-    padding:2px;
-  }
-  .doctor .name{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:17.5px;
-    color:var(--sage-deep);
-    margin:0 0 2px;
-  }
-  .doctor .role{
-    font-size:11.5px;
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    color:var(--gold-deep);
-    font-weight:700;
-    margin:0 0 6px;
-  }
-  .doctor .bio{
-    font-size:13px;
-    color:var(--ink-soft);
-    margin:0;
-    line-height:1.55;
-  }
-
-  /* ---------- Sections ---------- */
-  section.cat{
-    background:var(--paper);
-    border:1px solid var(--line);
-    border-radius:22px;
-    padding:30px 24px 32px;
-    margin-top:26px;
-    box-shadow:0 1px 0 rgba(0,0,0,.02), 0 18px 40px -12px rgba(44,52,37,.12);
-    scroll-margin-top:84px;
-  }
-  section.cat:first-of-type{margin-top:22px;}
-  .cat-head{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    margin-bottom:4px;
-  }
-  .cat-icon{
-    width:46px;height:46px;
-    border-radius:50%;
-    background:linear-gradient(145deg, var(--sage) 0%, var(--sage-deep) 100%);
-    color:var(--gold);
-    display:flex;align-items:center;justify-content:center;
-    flex-shrink:0;
-    box-shadow:0 4px 10px rgba(44,52,37,.25);
-  }
+  .doctor{margin-top:28px;display:flex;align-items:center;gap:18px;background:var(--sage-pale);border:1px solid var(--line);border-radius:16px;padding:20px;}
+  .doctor .avatar{width:76px;height:76px;border-radius:50%;flex-shrink:0;background:var(--paper);border:2px solid var(--gold);padding:2px;}
+  .doctor .name{font-family:'Fraunces',serif;font-weight:600;font-size:17.5px;color:var(--sage-deep);margin:0 0 2px;}
+  .doctor .role{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-deep);font-weight:700;margin:0 0 6px;}
+  .doctor .bio{font-size:13px;color:var(--ink-soft);margin:0;line-height:1.55;}
+  section.cat{padding-top:46px;scroll-margin-top:72px;}
+  section.cat:first-of-type{padding-top:40px;}
+  .cat-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cat-icon{width:42px;height:42px;border-radius:50%;background:var(--sage-deep);color:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
   .cat-icon svg{width:20px;height:20px;}
   .cat-titles{min-width:0;}
-  h2{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:22px;
-    margin:0;
-    color:var(--sage-deep);
-    line-height:1.2;
-  }
-  .cat-note{
-    font-size:13px;
-    color:var(--ink-soft);
-    margin:2px 0 0;
-    line-height:1.5;
-  }
-  .cat-rule{
-    height:1px;
-    background:linear-gradient(to right, var(--gold) 0 40px, var(--line) 40px 100%);
-    margin:16px 0 14px;
-  }
-
-  /* ---------- Subgroup headings (Cat/Dog, Basic/Full Grooming, etc.) ---------- */
-  .subhead-row{
-    display:flex;align-items:center;gap:8px;
-    margin:22px 0 2px;
-  }
+  h2{font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin:0;color:var(--sage-deep);line-height:1.2;}
+  .cat-note{font-size:13px;color:var(--ink-soft);margin:2px 0 0;line-height:1.5;}
+  .cat-rule{height:1px;background:linear-gradient(to right, var(--gold) 0 40px, var(--line) 40px 100%);margin:16px 0 14px;}
+  .subhead-row{display:flex;align-items:center;gap:8px;margin:22px 0 2px;}
   .subhead-row.first{margin-top:4px;}
-  .subhead{
-    font-family:'Inter',sans-serif;
-    font-weight:700;
-    font-size:11.5px;
-    color:var(--gold-deep);
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    background:var(--sage-pale);
-    padding:4px 10px;
-    border-radius:100px;
-  }
+  .subhead{font-family:'Inter',sans-serif;font-weight:700;font-size:11.5px;color:var(--gold-deep);text-transform:uppercase;letter-spacing:.08em;background:var(--sage-pale);padding:4px 10px;border-radius:100px;}
   .subhead-line{flex:1;height:1px;background:var(--line);}
-  .subnote{
-    font-size:12.5px;
-    color:var(--ink-soft);
-    margin:6px 0 10px;
-    line-height:1.5;
-  }
-
-  .row{
-    display:flex;
-    align-items:flex-start;
-    justify-content:space-between;
-    gap:14px;
-    padding:12px 0;
-    border-bottom:1px solid var(--line);
-  }
+  .subnote{font-size:12.5px;color:var(--ink-soft);margin:6px 0 10px;line-height:1.5;}
+  .row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);}
   .row:last-child{border-bottom:none;}
-  .row .name{
-    font-size:15px;
-    font-weight:500;
-    color:var(--ink);
-  }
-  .row .desc{
-    display:block;
-    font-size:12.5px;
-    font-weight:400;
-    color:var(--ink-faint);
-    margin-top:2px;
-    line-height:1.4;
-  }
-  .row .price{
-    font-family:'Space Mono',monospace;
-    font-size:14.5px;
-    font-weight:700;
-    color:var(--sage-deep);
-    white-space:nowrap;
-    padding-top:1px;
-  }
-  .row .price .cur{
-    font-size:10.5px;
-    font-weight:400;
-    color:var(--ink-faint);
-    margin-right:3px;
-  }
-  .row.highlight{
+  .row .name{font-size:15px;font-weight:500;color:var(--ink);}
+  .row .desc{display:block;font-size:12.5px;font-weight:400;color:var(--ink-faint);margin-top:2px;line-height:1.4;}
+  .row .price{font-family:'Space Mono',monospace;font-size:14.5px;font-weight:700;color:var(--sage-deep);white-space:nowrap;padding-top:1px;}
+  .row .price .cur{font-size:10.5px;font-weight:400;color:var(--ink-faint);margin-right:3px;}
+  .row.highlight .price{color:var(--gold-deep);}
+  .contact{margin-top:46px;background:var(--sage-deep);color:#f4f2e6;border-radius:18px;padding:30px 26px;}
+  .contact h3{font-family:'Fraunces',serif;font-size:19px;margin:0 0 16px;font-weight:600;}
+  .contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px;}
+  .contact .item{display:flex;gap:10px;align-items:flex-start;}
+  .contact .item svg{width:16px;height:16px;flex-shrink:0;margin-top:2px;color:var(--gold);}
+  .contact .item div{font-size:13px;line-height:1.4;}
+  .contact .item b{display:block;color:#b9bba6;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:2px;}
+  .btn-row{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;}
+  .btn{flex:1;min-width:140px;text-align:center;padding:12px 14px;border-radius:10px;font-size:13.5px;font-weight:600;text-decoration:none;cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;gap:7px;}
+  .btn svg{width:15px;height:15px;}
+  .btn.call{background:var(--gold);color:var(--sage-deep);}
+  .btn.wa{background:#2fae60;color:#fff;}
+  .qr-block{margin-top:22px;text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px 20px 24px;}
+  .qr-block h3{font-family:'Fraunces',serif;font-size:17px;margin:0 0 4px;color:var(--sage-deep);}
+  .qr-block p{font-size:12.5px;color:var(--ink-soft);margin:0 0 18px;}
+  #qrcode{display:inline-flex;padding:14px;background:#fff;border-radius:12px;border:1px solid var(--line);}
+  .qr-actions{margin-top:16px;}
+  .qr-actions button{background:var(--sage-deep);color:#fff;border:none;padding:10px 18px;border-radius:100px;font-size:12.5px;font-weight:600;cursor:pointer;}
+  footer{text-align:center;font-size:11px;color:var(--ink-faint);margin-top:36px;line-height:1.6;}
+  @media print{nav.cats,.qr-actions,.contact .btn-row{display:none;}}
+  @media (max-width:420px){.contact .grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="ic-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="ic-syringe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4l-2.2 2.2M16.5 5.5l2 2L8 18l-3.5 1.5L6 16 16.5 5.5z"/><path d="M13 8l3 3M4.5 19.5L3 21"/></symbol>
+  <symbol id="ic-scalpel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20L15 9a3 3 0 10-4-4L4 16"/><path d="M16 8l4-4"/></symbol>
+  <symbol id="ic-tooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4c-2 0-3.3 1.7-3 4l1 9c.2 2 1 3 2.2 3 1 0 1.5-.8 1.8-2l1-4.5h2l1 4.5c.3 1.2.8 2 1.8 2 1.2 0 2-1 2.2-3l1-9c.3-2.3-1-4-3-4-1.3 0-2 .6-3 .6s-1.7-.6-3-.6z"/></symbol>
+  <symbol id="ic-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 6 4-14 2 8h6"/></symbol>
+  <symbol id="ic-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><path d="M7.8 7.6L20 18M7.8 16.4L20 6"/></symbol>
+  <symbol id="ic-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10v9h12v-9"/></symbol>
+  <symbol id="ic-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6.2-6.5-11A6.5 6.5 0 0112 3.5 6.5 6.5 0 0118.5 10c0 4.8-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1V20a1 1 0 01-1 1C10.6 21 3 13.4 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.3.2 2.5.57 3.6a1 1 0 01-.25 1l-2.2 2.2z"/></symbol>
+  <symbol id="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="13" rx="1.8"/><path d="M4.5 6.5l7.5 6 7.5-6"/></symbol>
+</svg>
+
+<header>
+  <div class="hero-ring r2"></div>
+  <div class="hero-ring"></div>
+  <div class="wrap">
+    <div class="logo-medal"><img src="logo.png" alt="Premier Pets Clinic logo"></div>
+    <div class="eyebrow">Service Price List</div>
+    <h1>Premier Pets Clinic</h1>
+    <p class="ar-name">بريمير بيتس كلينك</p>
+    <div class="rule"></div>
+    <p class="tag">Every price below, no surprises at the counter. Scan, browse, and ask us anything — we're happy to explain any treatment in detail.</p>
+  </div>
+</header>
+
+<nav class="cats">
+  <div class="inner">
+    <a href="#consult">Consultations</a>
+    <a href="#vacc">Vaccinations</a>
+    <a href="#surgery">Surgery</a>
+    <a href="#dental">Dental</a>
+    <a href="#diag">Diagnostics</a>
+    <a href="#groom">Grooming</a>
+    <a href="#board">Boarding</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <div class="doctor">
+    <svg class="avatar" viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="44" cy="44" r="44" fill="#eef1e4"/>
+      <path d="M44 14c-11 0-19 9-19 20c0 5 1.5 10 4 14l3 5h24l3-5c2.5-4 4-9 4-14c0-11-8-20-19-20z" fill="#2c3425"/>
+      <ellipse cx="44" cy="33" rx="9" ry="11" fill="#e9c39c"/>
+      <path d="M14 80c0-17 13-30 30-30s30 13 30 30" fill="#ffffff" stroke="#262b21" stroke-width="1"/>
+      <path d="M32 52 L44 64 L56 52" fill="none" stroke="#2c3425" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M36 55 q0 12 8 12 q8 0 8 -12" fill="none" stroke="#8f6a28" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="44" cy="67" r="2.6" fill="#8f6a28"/>
+    </svg>
+    <div>
+      <p class="name">Dr. Hoda Abdelshahid</p>
+      <p class="role">Lead Veterinarian</p>
+      <p class="bio">Dedicated to compassionate, evidence-based care for cats and dogs of every size.</p>
+    </div>
+  </div>
+
+  <section class="cat" id="consult">
+    <div class="cat-head">
+      <div class="cat-icon"><svg><use href="#ic-cross"/></svg></div>
+      <div class="cat-titles"><h2>Consultations</h2><p class="cat-note">General check-ups and clinic visits.</p></div>
+    </div>
+    <div class="cat-rule"></div>
+    <div class="row"><div><div class="name">General Consultation</div><span class="desc">Health check, weight, basic exam</span></div><div class="price"><span class="cur">QAR</span>150</div></div>
+    <div class="row"><div><div class="name">Follow-up Visit</div><span class="desc">Within 7 days of initial visit</span></div><div class="price"><span class="cur">QAR</span>100</div></div>
+    <div class="row"><div><div class="name">Emergency Consultation</div><span class="desc">After-hours &amp; urgent cases</span></div><div class="price"><span class="cur">QAR</span>250</div></div>
+    <div class="row"><div><div class="name">Wood's Lamp Check</div></div><div class="price"><span class="cur">QAR</span>50</div></div>
+  </section>
+
+  <section class="cat" id="vacc">
+    <div class="cat-head">
+      <div class="cat-icon"><svg><use href="#ic-syringe"/></svg></div>
+      <div class="cat-titles"><h2>Vaccinations</h2><p class="cat-note">Core and lifestyle vaccines for dogs and cats.</p></div>
+    </div>
+    <div class="cat-rule"></div>
+    <div class="row"><div><div class="name">Tricat Vaccine</div><span class="desc">First vaccine is 3 shots — QAR 150 per shot</span></div><div class="price"><span class="cur">QAR</span>150</div></div>
+    <div class="row"><div><div class="name">DHPPiL Vaccine</div></div><div class="price"><span class="cur">QAR</span>150</div></div>
+    <div class="row"><div><div class="name">Rabies Vaccine</div></div><div class="price"><span class="cur">QAR</span>100</div></div>
+    <div class="row"><div><div class="name">Microsporum Canis Vaccine</div></div><div class="price"><span class="cur">QAR</span>200</div></div>
+    <div class="row"><div><div class="name">Kennel Cough Vaccine</div></div><div class="price"><span class="cur">QAR</span>200</div></div>
+    <div class="row"><div><div class="name">Deworming</div><span class="desc">For cat</span></div><div class="price"><span class="cur">QAR</span>50</div></div>
+    <div class="row"><div><div class="name">Deworming</div><span class="desc">For dog, up to 10 kg</span></div><div class="price"><span class="cur">QAR</span>50</div></div>
+    <div class="row"><div><div class="name">Deworming</div><span class="desc">For dog, 10 kg – 20 kg</span></div><div class="price"><span class="cur">QAR</span>75</div></div>
+    <div class="row"><div><div class="name">Deworming</div><span class="desc">For dog, 20 kg – 30 kg</span></div><div class="price"><span class="cur">QAR</span>100</div></div>
+  </section>
+
+  <section class="cat" id="surgery">
+    <div class="cat-head">
+      <div class="cat-icon"><svg><use href="#ic-scalpel"/></svg></div>
+      <div class="cat-titles"><h2>Surgery</h2><p class="cat-note">Includes anaesthesia and post-op monitoring unless noted.</p></div>
+    </div>
+    <div class="cat-rule"></div>
+    <div class="subhead-row first"><span class="subhead">Cat</span><span class="subhead-line"></span></div>
+    <div class="row"><div><div class="name">Neutering</div></div><div class="price"><span class="cur">QAR</span>300</div></div>
+    <div class="row"><div><div class="name">Spaying</div></div><div class="price"><span class="cur">QAR</span>450</div></div>
+    <div class="row"><div><div class="name">Cryptorchid Surgery</div></div><div class="price"><span class="cur">QAR</span>450</div></div>
+    <div class="row"><div><div class="name">E Collar</div></div><div class="price"><span class="cur">QAR</span>50</div></div>
+    <div class="row"><div><div class="name">Stray Neutering</div><span class="desc">With ear clip</span></div><div class="price"><span class="cur">QAR</span>200</div></div>
+    <div class="row"><div><div class="name">Stray Spaying</div><span class="desc">With ear clip</span></div><div class="price"><span class="cur">QAR</span>350</div></div>
+    <div class="subhead-row"><span class="subhead">Dog</span><span class="subhead-line"></span></div>
+    <div class="row"><div><div class="name">Neutering</div><span class="desc">Up to 10 kg</span></div><div class="price"><span class="cur">QAR</span>500</div></div>
+    <div class="row"><div><div class="name">Neutering</div><span class="desc">11 kg to 20 kg</span></div><div class="price"><span class="cur">QAR</span>600</div></div>
+    <div class="row"><div><div class="name">Neutering</div><span class="desc">21 kg and up</span></div><div class="price"><span class="cur">QAR</span>700</div></div>
+    <div class="row"><div><div class="name">Spaying</div><span class="desc">Up to 10 kg</span></div><div class="price"><span class="cur">QAR</span>700</div></div>
+    <div class="row"><div><div class="name">Spaying</div><span class="desc">11 kg to 20 kg</span></div><div class="price"><span class="cur">QAR</span>800</div></div>
+    <div class="row"><div><div class="name">Spaying</div><span class="desc">21 kg and up</span></div><div class="price"><span class="cur">QAR</span>900</div></div>
+    <div class="subhead-row"><span class="subhead">General</span><span class="subhead-line"></span></div>
+    <div class="row"><div><div class="name">Wound Suturing</div></div><div class="price"><span class="cur">QAR</span>200</div></div>
+    <div class="row highlight"><div><div class="name">Mass / Lump Removal</div><span class="desc">Price varies with size — quoted after exam</span></div><div class="price"><span class="cur">from</span>350</div></div>
+  </section>
+
+  <section class="cat" id="dental">
+    <div class="cat-head">
+      <div class="cat-icon"><svg><use href="#ic-tooth"/></svg></div>
+      <div class="cat-titles"><h2>Dental Care</h2></div>
+    </div>
+    <div class="cat-rule"></div>
+    <div class="row"><div><div class="name">Scaling &amp; Polishing</div><span class="desc">Up to 10 kg — cat and dog. +QAR 50 per kg above 10 kg</span></div><div class="price"><span class="cur">QAR</span>450</div></div>
+    <div class="row"><div><div class="name">Tooth Extraction</div></div><div class="price"><span class="cur">QAR</span>90</div></div>
+  </section>
+
+  <section class="cat" id="diag">
+    <div class="cat-head">
+      <div class="cat-icon"><svg><use href="#ic-pulse"/></svg></div>
+      <div class="cat-titles"><h2>Diagnostics</h2></div>
+    </div>
+    <div class="cat-rule"></div>
+    <div class="row"><div><div class="name">Complete Blood Count (CBC)</div></div><div class="price"><span class="cur">QAR</span>180</div></div>
+    <div class="row"><div><div class="name">CBC + Comprehensive Panel</div></div><div class="price"><span class="cur">QAR</span>450</div></div>
+    <div class="row"><div><div class="name">X-Ray (1 view)</div><span class="desc">Additional view: +QAR 50 each</span></div><div class="price"><span class="cur">QAR</span>250</div></div>
+    <div class="row"><div><div class="name">Ultrasound</div></div><div class="price"><span class="cur">QAR</span>300</div></div>
+    <div class="row"><div><div class="name">Skin / Ear Swab Test</div></div><div class="price"><span class="cur">QAR</span>90</div></div>
+  </section>
+
+  <section class="cat" id="groom">
+    <div class="cat-head">
+      <div class="cat-icon"><svg><use href="#ic-scissors"/></svg></div>
+      <div class="cat-titles"><h2>Grooming</h2><p class="cat-note">Cats &amp; dogs.</p></div>
+    </div>
+    <div class="cat-rule"></div>
+    <div class="subhead-row first"><span class="subhead">Basic Grooming</span><span class="subhead-line"></span></div>
+    <p class="subnote">Shower, deshedding, nail trimming, private shaving, eyes/ears cleaning</p>
+    <div class="row"><div><div class="name">Up to 10 kg</div></div><div class="price"><span class="cur">QAR</span>130</div></div>
+    <div class="row"><div><div class="name">11 kg – 20 kg</div></div><div class="price"><span class="cur">QAR</span>230</div></div>
+    <div class="row"><div><div class="name">21 kg and up</div></div><div class="price"><span class="cur">QAR</span>330</div></div>
+    <div class="subhead-row"><span class="subhead">Full Grooming</span><span class="subhead-line"></span></div>
+    <p class="subnote">Haircut, trimming, body shaving, shower, deshedding, nail trimming, private shaving, eyes/ears cleaning</p>
+    <div class="row"><div><div class="name">Up to 10 kg</div></div><div class="price"><span class="cur">QAR</span>210</div></div>
+    <div class="row"><div><div class="name">11 kg – 20 kg</div></div><div class="price"><span class="cur">QAR</span>260</div></div>
+    <div class="row"><div><div class="name">21 kg and up</div></div><div class="price"><span class="cur">QAR</span>310</div></div>
+    <div class="subhead-row"><span class="subhead">Specialized Services</span><span class="subhead-line"></span></div>
+    <div class="row"><div><div class="name">Nail Trimming</div></div><div class="price"><span class="cur">QAR</span>50</div></div>
+    <div class="row"><div><div class="name">Eyes &amp; Ears Cleaning</div></div><div class="price"><span class="cur">QAR</span>50</div></div>
+    <div class="row"><div><div class="name">Private Shaving</div></div><div class="price"><span class="cur">QAR</span>50</div></div>
+    <div class="row"><div><div class="name">Body Haircut (Trimming)</div></div><div class="price"><span class="cur">QAR</span>150</div></div>
+    <div class="row"><div><div class="name">Deshedding</div></div><div class="price"><span class="cur">QAR</span>50</div></div>
+  </section>
+
+  <section class="cat" id="board">
+    <div class="cat-head">
+      <div class="cat-icon"><svg><use href="#ic-home"/></svg></div>
+      <div class="cat-titles"><h2>Boarding</h2><p class="cat-note">A cozy, supervised stay for your pet — priced per night. Includes Royal Canin feeding, fresh water, a clean private space, daily check-ins, and full supervision from our doctor.</p></div>
+    </div>
+    <div class="cat-rule"></div>
+    <div class="subhead-row first"><span class="subhead">Cat Boarding</span><span class="subhead-line"></span></div>
+    <p class="subnote">One flat rate, every size</p>
+    <div class="row"><div><div class="name">Per night</div></div><div class="price"><span class="cur">QAR</span>50</div></div>
+    <div class="subhead-row"><span class="subhead">Dog Boarding</span><span class="subhead-line"></span></div>
+    <p class="subnote">Priced by weight, per night</p>
+    <div class="row"><div><div class="name">Up to 10 kg</div></div><div class="price"><span class="cur">QAR</span>55</div></div>
+    <div class="row"><div><div class="name">11 kg – 20 kg</div></div><div class="price"><span class="cur">QAR</span>75</div></div>
+    <div class="row"><div><div class="name">21 kg and up</div></div><div class="price"><span class="cur">QAR</span>85</div></div>
+  </section>
+
+  <div class="contact">
+    <h3>Visit or call us</h3>
+    <div class="grid">
+      <div class="item"><svg><use href="#ic-pin"/></svg><div><b>Address</b>Street, Building — Doha, Qatar</div></div>
+      <div class="item"><svg><use href="#ic-clock"/></svg><div><b>Hours</b>Sat–Thu, 9:00 AM – 9:00 PM</div></div>
+      <div class="item"><svg><use href="#ic-phone"/></svg><div><b>Phone</b>+974 3398 8712</div></div>
+      <div class="item"><svg><use href="#ic-mail"/></svg><div><b>Email</b>hello@premierpets.example</div></div>
+    </div>
+    <div class="btn-row">
+      <a class="btn call" href="tel:+97433988712"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><use href="#ic-phone"/></svg>Call the clinic</a>
+      <a class="btn wa" href="https://wa.me/97433988712" target="_blank" rel="noopener">Message on WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="qr-block">
+    <h3>Scan to open this price list</h3>
+    <p>This code always points to whatever address this page is hosted at.</p>
+    <div id="qrcode"></div>
+    <div class="qr-actions"><button onclick="window.print()">Print this page</button></div>
+  </div>
+
+  <footer>Premier Pets Clinic — prices shown are indicative and may vary after in-person examination.</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  new QRCode(document.getElementById("qrcode"), {
+    text: window.location.href,
+    width: 168,
+    height: 168,
+    colorDark: "#2c3425",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.M
+  });
+</script>
+
+</body>
+</html>
