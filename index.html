@@ -217,7 +217,7 @@
     margin:16px 0 14px;
   }
 
-  /* ---------- Subgroup headings (Cat/Dog, Basic/Full Grooming, etc.) ---------- */
+  /* ---------- Subgroup headings ---------- */
   .subhead-row{
     display:flex;align-items:center;gap:8px;
     margin:22px 0 2px;
@@ -343,38 +343,77 @@
   .qr-block{
     margin-top:22px;
     text-align:center;
-    background:var(--paper);
-    border:1px solid var(--line);
-    border-radius:18px;
-    padding:28px 20px 24px;
+    background:linear-gradient(160deg,#3a4630 0%,var(--sage-deep) 70%);
+    color:#f4f2e6;
+    border-radius:22px;
+    padding:38px 20px 32px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 18px 40px -12px rgba(44,52,37,.35);
+  }
+  .qr-block .paw-deco{color:rgba(244,242,230,.08);}
+  .qr-block > *:not(.paw-deco){position:relative;z-index:2;}
+  .qr-eyebrow{
+    text-transform:uppercase;letter-spacing:.18em;font-size:11px;
+    color:var(--gold);font-weight:600;margin-bottom:8px;
   }
   .qr-block h3{
     font-family:'Fraunces',serif;
-    font-size:17px;
-    margin:0 0 4px;
-    color:var(--sage-deep);
+    font-size:22px;
+    font-weight:600;
+    margin:0 0 22px;
+    color:#f4f2e6;
   }
-  .qr-block p{
-    font-size:12.5px;
-    color:var(--ink-soft);
-    margin:0 0 18px;
+  .qr-frame{
+    position:relative;
+    display:inline-block;
+    padding:22px;
+    background:#faf7ee;
+    border-radius:24px;
+    box-shadow:0 0 0 1px rgba(244,242,230,.3), 0 0 0 8px rgba(199,154,75,.18), 0 16px 34px rgba(0,0,0,.35);
   }
+  .qr-frame i{
+    position:absolute;width:26px;height:26px;
+    border:3px solid var(--gold);
+  }
+  .qr-frame i:nth-of-type(1){top:8px;left:8px;border-right:none;border-bottom:none;border-top-left-radius:12px;}
+  .qr-frame i:nth-of-type(2){top:8px;right:8px;border-left:none;border-bottom:none;border-top-right-radius:12px;}
+  .qr-frame i:nth-of-type(3){bottom:8px;left:8px;border-right:none;border-top:none;border-bottom-left-radius:12px;}
+  .qr-frame i:nth-of-type(4){bottom:8px;right:8px;border-left:none;border-top:none;border-bottom-right-radius:12px;}
   #qrcode{
     display:inline-flex;
-    padding:14px;
+    padding:10px;
     background:#fff;
     border-radius:12px;
-    border:1px solid var(--line);
+  }
+  #qrcode img,#qrcode canvas{display:block;}
+  .qr-badge{
+    position:absolute;
+    top:50%;left:50%;
+    width:44px;height:44px;
+    transform:translate(-50%,-50%);
+    background:var(--sage-deep);
+    color:var(--gold);
+    border:3px solid #fff;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .qr-badge svg{width:22px;height:22px;}
+  .qr-sub{
+    margin-top:20px;
+    font-size:13px;
+    color:#c7c9b4;
+    letter-spacing:.04em;
   }
   .qr-actions{margin-top:16px;}
   .qr-actions button{
-    background:var(--sage-deep);
-    color:#fff;
+    background:var(--gold);
+    color:var(--sage-deep);
     border:none;
-    padding:10px 18px;
+    padding:11px 22px;
     border-radius:100px;
     font-size:12.5px;
-    font-weight:600;
+    font-weight:700;
     cursor:pointer;
   }
 
@@ -657,9 +696,19 @@
   </div>
 
   <div class="qr-block">
-    <h3>Scan to open this price list</h3>
-    <p>This code always points to whatever address this page is hosted at.</p>
-    <div id="qrcode"></div>
+    <svg class="paw-deco" style="width:40px;top:4%;left:6%;transform:rotate(-20deg);"><use href="#ic-paw"/></svg>
+    <svg class="paw-deco" style="width:26px;top:12%;left:88%;transform:rotate(18deg);"><use href="#ic-paw"/></svg>
+    <svg class="paw-deco" style="width:34px;top:78%;left:4%;transform:rotate(26deg);"><use href="#ic-paw"/></svg>
+    <svg class="paw-deco" style="width:48px;top:82%;left:84%;transform:rotate(-14deg);"><use href="#ic-paw"/></svg>
+    <svg class="paw-deco" style="width:22px;top:48%;left:94%;transform:rotate(10deg);"><use href="#ic-paw"/></svg>
+    <div class="qr-eyebrow">Premier Pets Clinic</div>
+    <h3>Scan to open our price list</h3>
+    <div class="qr-frame">
+      <i></i><i></i><i></i><i></i>
+      <div id="qrcode"></div>
+      <div class="qr-badge"><svg><use href="#ic-paw"/></svg></div>
+    </div>
+    <div class="qr-sub">Point your phone camera at the code</div>
     <div class="qr-actions">
       <button onclick="window.print()">Print this page</button>
     </div>
@@ -676,7 +725,7 @@
     height: 168,
     colorDark: "#2c3425",
     colorLight: "#ffffff",
-    correctLevel: QRCode.CorrectLevel.M
+    correctLevel: QRCode.CorrectLevel.H
   });
 </script>
 
