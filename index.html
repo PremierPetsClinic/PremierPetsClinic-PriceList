@@ -417,6 +417,28 @@
     cursor:pointer;
   }
 
+  /* ---------- Watermark ---------- */
+  body::after{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    z-index:50;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='200'%3E%3Ctext x='130' y='100' text-anchor='middle' transform='rotate(-28 130 100)' font-family='Georgia,serif' font-size='17' font-weight='bold' fill='%232c3425' fill-opacity='0.07'%3EPremier Pets Clinic%3C/text%3E%3C/svg%3E");
+    background-repeat:repeat;
+  }
+  .updated{
+    display:inline-block;
+    margin-top:16px;
+    font-size:11.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--gold);
+    border:1px solid rgba(199,154,75,.5);
+    padding:6px 14px;
+    border-radius:100px;
+    font-weight:600;
+  }
+
   footer{
     text-align:center;
     font-size:11px;
@@ -505,6 +527,7 @@
     <div class="eyebrow">Service Price List</div>
     <div class="rule"></div>
     <p class="tag">Every price below, no surprises at the counter. Scan, browse, and ask us anything — we're happy to explain any treatment in detail.</p>
+    <div class="updated">Prices updated October 2026</div>
   </div>
 </header>
 
@@ -565,7 +588,7 @@
     </div>
     <div class="cat-rule"></div>
 
-    <div class="row"><div><div class="name">Tricat Vaccine</div></div><div class="price"><span class="cur">QAR</span>150</div></div>
+    <div class="row"><div><div class="name">Tricat Vaccine</div><span class="desc">First course is 3 shots — QAR 150 per shot</span></div><div class="price"><span class="cur">QAR</span>150</div></div>
     <div class="row"><div><div class="name">DHPPiL Vaccine</div><span class="desc">First course is 3 shots — QAR 150 per shot</span></div><div class="price"><span class="cur">QAR</span>150</div></div>
     <div class="row"><div><div class="name">Rabies Vaccine</div></div><div class="price"><span class="cur">QAR</span>100</div></div>
     <div class="row"><div><div class="name">Microsporum Canis Vaccine</div></div><div class="price"><span class="cur">QAR</span>200</div></div>
@@ -714,7 +737,7 @@
     </div>
   </div>
 
-  <footer>Premier Pets Clinic — prices shown are indicative and may vary after in-person examination.</footer>
+  <footer>Premier Pets Clinic — prices shown are indicative, last updated October 2026, and may vary after in-person examination.</footer>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
